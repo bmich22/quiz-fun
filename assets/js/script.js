@@ -20,28 +20,38 @@ function runQuiz() {
       correctAnswer: "1D",
     }
   ]
-  let correctAnswer = questionContent[0].correctAnswer;
+  let quest = questionContent[0].question;
+  let ch1 = questionContent[0].choice1;
+  let ch2 = questionContent[0].choice2;
+  let ch3 = questionContent[0].choice3;
+  let ch4 = questionContent[0].choice4;
+  let correctAns = questionContent[0].correctAnswer;
 
-  document.getElementById("start-page").setAttribute("hidden", "hidden");
-  document.getElementById("quiz-page").removeAttribute("hidden");
-  document.getElementById("question").textContent = questionContent[0].question;
-  document.getElementById("choiceA").textContent = questionContent[0].choice1;
-  document.getElementById("choiceB").textContent = questionContent[0].choice2;
-  document.getElementById("choiceC").textContent = questionContent[0].choice3;
-  document.getElementById("choiceD").textContent = questionContent[0].choice4;
-
-  checkAnswer(correctAnswer);
+  displayQuestion(quest, ch1, ch2, ch3, ch4, correctAns);
 
 }
 
-function checkAnswer(correctAnswer) {
+function displayQuestion(quest, ch1, ch2, ch3, ch4, correctAns) {
+  document.getElementById("start-page").setAttribute("hidden", "hidden");
+  document.getElementById("quiz-page").removeAttribute("hidden");
+  document.getElementById("question").textContent = quest;
+  document.getElementById("choiceA").textContent = ch1;
+  document.getElementById("choiceB").textContent = ch2;
+  document.getElementById("choiceC").textContent = ch3;
+  document.getElementById("choiceD").textContent = ch4;
+
+  checkAnswer(correctAns);
+
+}
+
+function checkAnswer(correctAns) {
   let choices = document.getElementById("choices-area");
   choiceButtons = choices.getElementsByTagName("button");
 
-  for (let button of choiceButtons) { 
+  for (let button of choiceButtons) {
 
-    button.addEventListener("click", function(){
-      if (this.textContent === correctAnswer) {
+    button.addEventListener("click", function () {
+      if (this.textContent === correctAns) {
         alert("correct");
       } else {
         alert("incorrect");
