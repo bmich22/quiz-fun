@@ -16,7 +16,7 @@
         <button type="button" class="btn" id="start" data-type="submit">START QUIZ</button>
     </section>
 
-    <section id="quiz-page">
+    <section id="quiz-page" hidden="hidden">
         <h3 id="question"></h3>
         <div id="choices-area">
             <button type="button" class="choice-btn" data-type="submit" id="choiceA">A. Choice</button><br>
@@ -35,12 +35,10 @@
         <p class="scores">Incorrect Answers: <span id="incorrectNum">0</span></p>
     </section>
 
-    <section id="final-score">
+    <section id="final-score" hidden="hidden">
         <p class="scores">Your Final Score: <span id="totalCorrect">0</span> / 5</p>
         <button type="button" class="btn" data-type="submit" id="play-again">PLAY AGAIN</button>
     </section>
-
-
 
 
     <script src="assets/js/script.js"></script>

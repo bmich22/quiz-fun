@@ -1,35 +1,44 @@
-function runQuiz() {
+// Wait for the DOM to finish loading before beginning the quiz
+// Listen for click on start button
 
-}
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("start").addEventListener("click", function() {
+        alert("You clicked the start button!");
+      })
+    })      
 
-function displayQuestion() {
+// function runQuiz() {
 
-}
+// }
 
-function checkAnswer() {
+// function displayQuestion() {
 
-}
+// }
 
-function showResult() {
+// function checkAnswer() {
 
-}
+// }
 
-function incrementCorrect() {
+// function showResult() {
 
-}
+// }
 
-function incrementWrong() {
+// function incrementCorrect() {
 
-}
+// }
 
-function showFinalScore() {
+// function incrementWrong() {
 
-}
+// }
 
-function nextQuestion() {
+// function showFinalScore() {
 
-}
+// }
 
-function startAgain() {
-    
-}
+// function nextQuestion() {
+
+// }
+
+// function startAgain() {
+
+// }
