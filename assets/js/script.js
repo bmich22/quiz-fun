@@ -51,35 +51,45 @@ function checkAnswer(correctAns) {
   for (let button of choiceButtons) {
 
     button.addEventListener("click", function () {
+      let result = "";
       if (this.textContent === correctAns) {
         alert("correct");
+          result = "Correct!"
+          showResult(result); incrementCorrect();
       } else {
         alert("incorrect");
-      }
-    })
-  }
+          result = "Incorrect!"
+          showResult(result); incrementWrong();
+    }
+    
+  })
 }
 
-function showResult() {
+function showResult(result) {
+  document.getElementById("result-area").removeAttribute("hidden");
+  document.getElementById("result-text").textContent = result;
 
 }
 
 function incrementCorrect() {
-
+  let oldCorrectNum = parseInt(document.getElementById("correctNum").innerText);
+  document.getElementById("correctNum").innerText = ++oldCorrectNum;
 }
 
 function incrementWrong() {
-
+  let oldWrongNum = parseInt(document.getElementById("wrongNum").innerText);
+  document.getElementById("wrongNum").innerText = ++oldWrongNum;
 }
 
 function showFinalScore() {
 
 }
 
-function nextQuestion() {
+// function nextQuestion() {
+
+// }
+
+// function startAgain() {
 
 }
 
-function startAgain() {
-
-}
