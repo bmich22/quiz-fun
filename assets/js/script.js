@@ -1,6 +1,6 @@
 const startPage = document.getElementById("start-page");
 const quizPage= document.getElementById("quiz-page");
-const questionText = document.getElementById("question");
+const questionText = document.getElementById("quizQuestion");
 const choiceA =  document.getElementById("choiceA");
 const choiceB = document.getElementById("choiceB");
 const choiceC = document.getElementById("choiceC");
@@ -61,37 +61,39 @@ function runQuiz() {
 function displayQuestion() {
   startPage.setAttribute("hidden", "hidden");
   quizPage.removeAttribute("hidden");
-  questionText = questionContent.question[currentQuestion];
-  choiceA.textContent = questionContent.choice1[currentQuestion];
-  choiceB.textContent = questionContent.choice2[currentQuestion];
-  choiceC.textContent = questionContent.choice3[currentQuestion];
-  choiceD.textContent = questionContent.choice4[currentQuestion];
+  alert(currentQuestion);
+  questionText.textContent = questionContent[currentQuestion].question;
+  choiceA.textContent = questionContent[currentQuestion].choice1;
+  choiceB.textContent = questionContent[currentQuestion].choice2;
+  choiceC.textContent = questionContent[currentQuestion].choice3;
+  choiceD.textContent = questionContent[currentQuestion].choice4;
 
-  checkAnswer();
+  // checkAnswer();
 }
 
-function checkAnswer() {
-  let choices = document.getElementById("choices-area");
-  choiceButtons = choices.getElementsByTagName("button");
+function checkAnswer(value) {
+  alert(value);
+  // let choices = document.getElementById("choices-area");
+  // choiceButtons = choices.getElementsByTagName("button");
 
-  for (let button of choiceButtons) {
+  // for (let button of choiceButtons) {
 
-    button.addEventListener("click", function () {
-      let result = "";
-      alert(this.textContent);
+  //   button.addEventListener("click", function () {
+  //     let result = "";
+  //     alert(this.textContent);
       
-      if (this.textContent === correctAns) {
-        alert("correct");
-        result = "Correct!"
-        // showResult(result); incrementCorrect();
+  //     if (this.textContent === correctAns) {
+  //       alert("correct");
+  //       result = "Correct!"
+  //       // showResult(result); incrementCorrect();
       
-      } else {
-        alert("incorrect");
-        result = "Incorrect!"
-        // showResult(result); incrementWrong();
-      }
+  //     } else {
+  //       alert("incorrect");
+  //       result = "Incorrect!"
+  //       // showResult(result); incrementWrong();
+  //     }
 
-    })
+  //   })
   }
 
   function showResult(result) {
@@ -119,5 +121,5 @@ function checkAnswer() {
   // function nextQuestion() {
  // }
 // function startAgain() {
-}
+// }
 
