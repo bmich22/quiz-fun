@@ -1,10 +1,10 @@
 const startPage = document.getElementById("start-page");
-const quizPage= document.getElementById("quiz-page");
+const quizPage = document.getElementById("quiz-page");
 const questionText = document.getElementById("quizQuestion");
-const choiceA =  document.getElementById("choiceA");
+const choiceA = document.getElementById("choiceA");
 const choiceB = document.getElementById("choiceB");
 const choiceC = document.getElementById("choiceC");
-const choiceD = document.getElementById("choiceD"); 
+const choiceD = document.getElementById("choiceD");
 const resultArea = document.getElementById("result-area");
 const resultText = document.getElementById("result-text");
 const correctNum = document.getElementById("correctNum");
@@ -19,6 +19,30 @@ const questionContent = [
     choice3: "1C",
     choice4: "1D",
     correct: "1D",
+  },
+  {
+    question: "This is question 2",
+    choice1: "2A",
+    choice2: "2B",
+    choice3: "2C",
+    choice4: "2D",
+    correct: "2D",
+  },
+  {
+    question: "This is question 3",
+    choice1: "3A",
+    choice2: "3B",
+    choice3: "3C",
+    choice4: "3D",
+    correct: "3A",
+  },
+  {
+    question: "This is question 4",
+    choice1: "4A",
+    choice2: "4B",
+    choice3: "4C",
+    choice4: "4D",
+    correct: "4C",
   }
 ]
 
@@ -43,7 +67,7 @@ function runQuiz() {
   if (currentQuestion < questionContent.length) {
     displayQuestion();
   } else {
-    alert("Game Over!");
+    showFinalScore();
   }
 
 }
@@ -51,7 +75,11 @@ function runQuiz() {
 function displayQuestion() {
   startPage.setAttribute("hidden", "hidden");
   quizPage.removeAttribute("hidden");
-  alert(currentQuestion);
+  choiceA.disabled = false;
+  choiceB.disabled = false;
+  choiceC.disabled = false;
+  choiceD.disabled = false;
+  // alert("array number is " + currentQuestion);
   questionText.textContent = questionContent[currentQuestion].question;
   choiceA.textContent = questionContent[currentQuestion].choice1;
   choiceB.textContent = questionContent[currentQuestion].choice2;
@@ -63,54 +91,50 @@ function displayQuestion() {
 function checkAnswer(value) {
   // alert(value);
   let inputAnswer = document.getElementById(value).textContent;
-  alert(inputAnswer);
-  alert(questionContent[currentQuestion].correct);
   if (inputAnswer === questionContent[currentQuestion].correct) {
-    alert("CORRECT!");
+    // alert("CORRECT!");
     incrementCorrect()
-    
+
   } else {
-    alert("not correct!");
+    // alert("not correct!");
     incrementWrong();
   }
-  }
+}
 
-  function showResult() {
-    resultArea.removeAttribute("hidden");
-    resultText.textContent = result;
-    correctNum.textContent = correctScore;
-    wrongNum.textContent = wrongScore;
-    choiceA.disabled= true;
-    choiceB.disabled= true;
-    choiceC.disabled= true;
-    choiceD.disabled= true;
-    
-  }
+function showResult() {
+  resultArea.removeAttribute("hidden");
+  resultText.textContent = result;
+  correctNum.textContent = correctScore;
+  wrongNum.textContent = wrongScore;
+  choiceA.disabled = true;
+  choiceB.disabled = true;
+  choiceC.disabled = true;
+  choiceD.disabled = true;
+}
 
-  function incrementCorrect() {
-    correctScore += 1;
-    result = "that is indeed correct!";
-    alert(correctScore);
-    showResult();
-  }
+function incrementCorrect() {
+  correctScore += 1;
+  result = "that is indeed correct!";
+  showResult();
+}
 
-  function incrementWrong() {
-    wrongScore += 1;
-    alert(wrongScore);
-    result = "No, that is not correct!";
-    showResult();
-  }
+function incrementWrong() {
+  wrongScore += 1;
+  result = "No, that is not correct!";
+  showResult();
+}
 
-  function nextQuestion() {
-    currentQuestion +=1;
-    runQuiz();
-  }
+function nextQuestion() {
+  currentQuestion += 1;
+  runQuiz();
+}
 
 
-  
-  // show final score and start again button
-  function showFinalScore() {
- }
+
+// show final score and start again button
+function showFinalScore() {
+  alert("Game Over!");
+}
 
 
 
