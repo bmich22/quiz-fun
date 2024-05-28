@@ -19,14 +19,14 @@
     <section id="quiz-page" hidden="hidden">
         <h3 id="quizQuestion"></h3>
         <div id="choices-area">
-            <button type="button" class="choice-btn" data-type="submit" id="choiceA" onclick="checkAnswer(this.value)" value="A">A. Choice</button><br>
-            <button type="button" class="choice-btn" data-type="submit" id="choiceB" onclick="checkAnswer(this.value)">B. Choice</button><br>
-            <button type="button" class="choice-btn" data-type="submit" id="choiceC" onclick="checkAnswer(this.value)">C. Choice</button><br>
-            <button type="button" class="choice-btn" data-type="submit" id="choiceD" onclick="checkAnswer(this.value)">D. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceA" onclick="checkAnswer(this.value)" value="choiceA">A. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceB" onclick="checkAnswer(this.value)" value="choiceB">B. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceC" onclick="checkAnswer(this.value)" value="choiceC">C. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceD" onclick="checkAnswer(this.value)" value="choiceD">D. Choice</button><br>
         </div>
         <div id="result-area" hidden="hidden">
             <p id="result-text"></p>
-            <button type="button" class="btn" data-type="submit" id="next-button">NEXT</button>
+            <button type="button" class="btn" data-type="submit" id="next-button" onclick="nextQuestion()">NEXT</button>
         </div>
     </section>
 
