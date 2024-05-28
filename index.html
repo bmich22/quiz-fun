@@ -16,13 +16,18 @@
         <button type="button" type="btn" id="start" data-type="submit" onclick="runQuiz()">START QUIZ</button>
     </section>
 
+<section id="quiz-area">
     <section id="quiz-page" hidden="hidden">
         <h3 id="quizQuestion"></h3>
         <div id="choices-area">
-            <button type="button" class="choice-btn" data-type="submit" id="choiceA" onclick="checkAnswer(this.value)" value="choiceA">A. Choice</button><br>
-            <button type="button" class="choice-btn" data-type="submit" id="choiceB" onclick="checkAnswer(this.value)" value="choiceB">B. Choice</button><br>
-            <button type="button" class="choice-btn" data-type="submit" id="choiceC" onclick="checkAnswer(this.value)" value="choiceC">C. Choice</button><br>
-            <button type="button" class="choice-btn" data-type="submit" id="choiceD" onclick="checkAnswer(this.value)" value="choiceD">D. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceA" onclick="checkAnswer(this.value)"
+                value="choiceA">A. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceB" onclick="checkAnswer(this.value)"
+                value="choiceB">B. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceC" onclick="checkAnswer(this.value)"
+                value="choiceC">C. Choice</button><br>
+            <button type="button" class="choice-btn" data-type="submit" id="choiceD" onclick="checkAnswer(this.value)"
+                value="choiceD">D. Choice</button><br>
         </div>
         <div id="result-area" hidden="hidden">
             <p id="result-text"></p>
@@ -34,10 +39,12 @@
         <p class="scores">Correct Answers: <span id="correctNum">0</span></p>
         <p class="scores">Incorrect Answers: <span id="wrongNum">0</span></p>
     </section>
+</section>
 
     <section id="final-score" hidden="hidden">
-        <p class="scores">Your Final Score: <span id="totalCorrect">0</span> / 5</p>
-        <button type="button" class="btn" data-type="submit" id="play-again">PLAY AGAIN</button>
+        <h3 class="scores">Your Final Score: <span id="totalCorrect">0</span> / <span id="numberOfQuestions">0</span>
+        </h3>
+        <button type="button" class="btn" data-type="submit" id="play-again" onclick="">PLAY AGAIN</button>
     </section>
 
 

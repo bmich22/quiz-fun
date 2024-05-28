@@ -9,6 +9,9 @@ const resultArea = document.getElementById("result-area");
 const resultText = document.getElementById("result-text");
 const correctNum = document.getElementById("correctNum");
 const wrongNum = document.getElementById("wrongNum");
+const scoreArea = document.getElementById("score-area");
+const gameOver = document.getElementById("final-score");
+const quizArea = document.getElementById("quiz-area");
 
 // Question Content
 const questionContent = [
@@ -51,6 +54,7 @@ let currentQuestion = 0;
 let correctScore = 0;
 let wrongScore = 0;
 let result = "";
+let numberOfQuestions = questionContent.length;
 
 // Wait for the DOM to finish loading before beginning the quiz
 // Listen for click on start button
@@ -134,6 +138,8 @@ function nextQuestion() {
 // show final score and start again button
 function showFinalScore() {
   alert("Game Over!");
+  quizArea.setAttribute("hidden", "hidden");
+  gameOver.removeAttribute("hidden");
 }
 
 
