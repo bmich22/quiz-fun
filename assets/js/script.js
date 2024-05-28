@@ -63,11 +63,9 @@ function checkAnswer(value) {
   let inputAnswer = document.getElementById(value);
   inputAnswer.style.backgroundColor = "blue";
   if (inputAnswer.textContent === questionContent[currentQuestion].correct) {
-    // alert("CORRECT!");
     incrementCorrect()
 
   } else {
-    // alert("not correct!");
     inputAnswer.style.backgroundColor = "red";
     incrementWrong();
   }
@@ -111,7 +109,6 @@ function nextQuestion() {
 
 // show final score and start again button
 function showFinalScore() {
-  alert(correctScore);
   quizArea.setAttribute("hidden", "hidden");
   gameOver.removeAttribute("hidden");
   totalCorrect.textContent = correctScore;

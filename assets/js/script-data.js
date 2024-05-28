@@ -3,7 +3,7 @@ const questionContent = [
   {
     question: "This is question 1",
     choice1: "hamilton",
-    choice2: "1book of mormon",
+    choice2: "book of mormon",
     choice3: "a chorus line",
     choice4: "cabaret",
     correct: "cabaret",

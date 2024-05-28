@@ -5,48 +5,64 @@ body {
 
 
 .center {
-    border: 5px solid;
+    width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 5% 15%;
+    padding: 5% 5%;
     text-align: center;
-  }
+}
 
-  button {
+button {
     background-color: green;
     border-radius: 5%;
     color: white;
     padding: 10px 16px;
     text-align: center;
-    text-decoration: none;
+    font-weight: 500;
     display: inline-block;
     font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+    margin: 5px 2px;
+}
 
-  h3 {
+.choice-btn {
+    width:15%;
+    margin-top: 1%;
+}
+ 
+h1 {
+    font-size: 3rem;
+}
 
-  }
+h2 {
+    font-size: 2rem;
+}
 
-  p{
-    
-  }
+h3 {
+    font-size: 1.8rem;
+}
 
-  #score-area {
-    padding-top:5%;
-  }
+p {}
 
-  h4 {
-    font-size: 150%;
-  }
+#score-area {
+    padding-top: 3%;
+}
 
-  #correctNum {
+h4 {
+    font-size: 1.3rem;
+}
+
+.scores {
+    font-weight: 700;
+}
+
+#correctNum {
     color: blue;
-  }
+    padding-right: 5%;
+}
 
-  #wrongNum {
+#wrongNum {
     color: red;
-  }
+}
+
