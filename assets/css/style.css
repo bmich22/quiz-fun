@@ -1,5 +1,6 @@
 body {
     background-color: gold;
+    font-family: "Poppins", sans-serif;
 }
 
 
@@ -9,6 +10,43 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10%;
+    padding: 5% 15%;
+    text-align: center;
   }
 
+  button {
+    background-color: green;
+    border-radius: 5%;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  h3 {
+
+  }
+
+  p{
+    
+  }
+
+  #score-area {
+    padding-top:5%;
+  }
+
+  h4 {
+    font-size: 150%;
+  }
+
+  #correctNum {
+    color: blue;
+  }
+
+  #wrongNum {
+    color: red;
+  }

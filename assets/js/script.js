@@ -60,13 +60,15 @@ function displayQuestion() {
 
 function checkAnswer(value) {
   // alert(value);
-  let inputAnswer = document.getElementById(value).textContent;
-  if (inputAnswer === questionContent[currentQuestion].correct) {
+  let inputAnswer = document.getElementById(value);
+  inputAnswer.style.backgroundColor = "blue";
+  if (inputAnswer.textContent === questionContent[currentQuestion].correct) {
     // alert("CORRECT!");
     incrementCorrect()
 
   } else {
     // alert("not correct!");
+    inputAnswer.style.backgroundColor = "red";
     incrementWrong();
   }
 }
@@ -85,19 +87,25 @@ function showResult() {
 
 function incrementCorrect() {
   correctScore += 1;
-  result = "that is indeed correct!";
+  resultText.style.color = "blue";
+  result = "CORRECT!";
   showResult();
 }
 
 function incrementWrong() {
   wrongScore += 1;
-  result = "No, that is not correct!";
+  resultText.style.color = "red";
+  result = "NOT CORRECT!";
   showResult();
 }
 
 function nextQuestion() {
   currentQuestion += 1;
   nextBtn.disabled = true;
+  choiceA.style.backgroundColor = "green";
+  choiceB.style.backgroundColor = "green";
+  choiceC.style.backgroundColor = "green";
+  choiceD.style.backgroundColor = "green";
   runQuiz();
 }
 

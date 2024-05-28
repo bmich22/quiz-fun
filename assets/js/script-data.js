@@ -2,11 +2,11 @@
 const questionContent = [
   {
     question: "This is question 1",
-    choice1: "1A",
-    choice2: "1B",
-    choice3: "1C",
-    choice4: "1D",
-    correct: "1D",
+    choice1: "hamilton",
+    choice2: "1book of mormon",
+    choice3: "a chorus line",
+    choice4: "cabaret",
+    correct: "cabaret",
   },
   {
     question: "This is question 2",
