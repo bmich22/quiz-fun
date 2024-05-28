@@ -12,49 +12,17 @@ const wrongNum = document.getElementById("wrongNum");
 const scoreArea = document.getElementById("score-area");
 const gameOver = document.getElementById("final-score");
 const quizArea = document.getElementById("quiz-area");
+const totalQuestions = document.getElementById("number-of-questions");
+const nextBtn = document.getElementById("next-button");
+const totalCorrect = document.getElementById("total-correct");
 
-// Question Content
-const questionContent = [
-  {
-    question: "This is question 1",
-    choice1: "1A",
-    choice2: "1B",
-    choice3: "1C",
-    choice4: "1D",
-    correct: "1D",
-  },
-  {
-    question: "This is question 2",
-    choice1: "2A",
-    choice2: "2B",
-    choice3: "2C",
-    choice4: "2D",
-    correct: "2D",
-  },
-  {
-    question: "This is question 3",
-    choice1: "3A",
-    choice2: "3B",
-    choice3: "3C",
-    choice4: "3D",
-    correct: "3A",
-  },
-  {
-    question: "This is question 4",
-    choice1: "4A",
-    choice2: "4B",
-    choice3: "4C",
-    choice4: "4D",
-    correct: "4C",
-  }
-]
 
 // Set current question, correctScore and wrongScore variables to zero
 let currentQuestion = 0;
 let correctScore = 0;
 let wrongScore = 0;
 let result = "";
-let numberOfQuestions = questionContent.length;
+let total = questionContent.length;
 
 // Wait for the DOM to finish loading before beginning the quiz
 // Listen for click on start button
@@ -73,7 +41,6 @@ function runQuiz() {
   } else {
     showFinalScore();
   }
-
 }
 
 function displayQuestion() {
@@ -89,7 +56,6 @@ function displayQuestion() {
   choiceB.textContent = questionContent[currentQuestion].choice2;
   choiceC.textContent = questionContent[currentQuestion].choice3;
   choiceD.textContent = questionContent[currentQuestion].choice4;
-
 }
 
 function checkAnswer(value) {
@@ -114,6 +80,7 @@ function showResult() {
   choiceB.disabled = true;
   choiceC.disabled = true;
   choiceD.disabled = true;
+  nextBtn.disabled = false;
 }
 
 function incrementCorrect() {
@@ -130,16 +97,21 @@ function incrementWrong() {
 
 function nextQuestion() {
   currentQuestion += 1;
+  nextBtn.disabled = true;
   runQuiz();
 }
 
-
-
 // show final score and start again button
 function showFinalScore() {
-  alert("Game Over!");
+  alert(correctScore);
   quizArea.setAttribute("hidden", "hidden");
   gameOver.removeAttribute("hidden");
+  totalCorrect.textContent = correctScore;
+  totalQuestions.textContent= total;
+}
+
+function startAgain() {
+  location.reload();
 }
 
 
