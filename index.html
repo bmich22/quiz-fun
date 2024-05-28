@@ -10,44 +10,49 @@
 
 <body>
 
-    <section id="start-page">
-        <h1 class="heading">Quiz</h1>
-        <h2>Test your knowledge about </h2>
-        <button type="button" type="btn" id="start"  onclick="runQuiz()">START QUIZ</button>
-    </section>
+    <div class="center">
+        <section id="start-page">
+            <h1 class="heading">Quiz</h1>
+            <h2>Test your knowledge about </h2>
+            <button type="button" type="btn" id="start" onclick="runQuiz()">START QUIZ</button>
+        </section>
 
-<section id="quiz-area">
-    <section id="quiz-page" hidden="hidden">
-        <h3 id="quizQuestion"></h3>
-        <div id="choices-area">
-            <button type="button" class="choice-btn"  id="choiceA" onclick="checkAnswer(this.value)"
-                value="choiceA">A. Choice</button><br>
-            <button type="button" class="choice-btn"  id="choiceB" onclick="checkAnswer(this.value)"
-                value="choiceB">B. Choice</button><br>
-            <button type="button" class="choice-btn"  id="choiceC" onclick="checkAnswer(this.value)"
-                value="choiceC">C. Choice</button><br>
-            <button type="button" class="choice-btn"  id="choiceD" onclick="checkAnswer(this.value)"
-                value="choiceD">D. Choice</button><br>
-        </div>
-        <div id="result-area" hidden="hidden">
-            <h3 id="result-text"></h3>
-            <button type="button" class="btn" id="next-button" onclick="nextQuestion()">NEXT</button>
-        </div>
-    </section>
+        <section id="quiz-area">
+            <section id="quiz-page" hidden="hidden">
+                <h3 id="quizQuestion"></h3>
+                <div id="choices-area">
+                    <button type="button" class="choice-btn" id="choiceA" onclick="checkAnswer(this.value)"
+                        value="choiceA">A. Choice</button><br>
+                    <button type="button" class="choice-btn" id="choiceB" onclick="checkAnswer(this.value)"
+                        value="choiceB">B. Choice</button><br>
+                    <button type="button" class="choice-btn" id="choiceC" onclick="checkAnswer(this.value)"
+                        value="choiceC">C. Choice</button><br>
+                    <button type="button" class="choice-btn" id="choiceD" onclick="checkAnswer(this.value)"
+                        value="choiceD">D. Choice</button><br>
+                </div>
+                <div id="result-area" hidden="hidden">
+                    <h3 id="result-text"></h3>
+                    <button type="button" class="btn" id="next-button" onclick="nextQuestion()">NEXT</button>
+                </div>
+            </section>
 
-    <section id="score-area">
-        <p class="scores">Correct Answers: <span id="correctNum">0</span></p>
-        <p class="scores">Incorrect Answers: <span id="wrongNum">0</span></p>
-    </section>
-</section>
+            <section id="score-area">
+                <p class="scores">Correct Answers: <span id="correctNum">0</span></p>
+                <p class="scores">Incorrect Answers: <span id="wrongNum">0</span></p>
+            </section>
+        </section>
 
-    <section id="final-score" hidden="hidden">
-        <h3 class="scores">Your Final Score: <span id="total-correct">0</span> / <span id="number-of-questions">0</span>
-        </h3>
-        <button type="button" class="btn" data-type="submit" id="play-again" onclick="startAgain()">PLAY AGAIN</button>
-    </section>
+        <section id="final-score" hidden="hidden">
+            <h3 class="scores">Your Final Score: <span id="total-correct">0</span> / <span
+                    id="number-of-questions">0</span>
+            </h3>
+            <button type="button" class="btn" data-type="submit" id="play-again" onclick="startAgain()">PLAY
+                AGAIN</button>
+        </section>
 
-<script src="assets/js/script-data.js"></script>
+    </div>git a
+
+    <script src="assets/js/script-data.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

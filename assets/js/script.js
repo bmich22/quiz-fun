@@ -114,6 +114,3 @@ function startAgain() {
   location.reload();
 }
 
-
-
-
