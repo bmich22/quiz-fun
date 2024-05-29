@@ -17,6 +17,7 @@ const nextBtn = document.getElementById("next-button");
 const totalCorrect = document.getElementById("total-correct");
 const source = document.getElementById("source");
 const theme = document.getElementById("subject");
+const howToPlay = document.getElementById("instructions");
 
 // Set current question, correctScore and wrongScore variables to zero
 let currentQuestion = 0;
@@ -38,6 +39,7 @@ let newChoices = [];
 
 // Display subject of quiz on opening page
 theme.textContent = subject;
+resultText.style.visibility = "hidden";
 
 // Wait for the DOM to finish loading before beginning the quiz
 // Listen for click on start button
@@ -67,6 +69,7 @@ function displayQuestion() {
   btnB.disabled = false;
   btnC.disabled = false;
   btnD.disabled = false;
+  nextBtn.disabled = true;
   // display current question
   questionText.textContent = questionContent[currentQuestion].question;
   source.removeAttribute("hidden");
@@ -99,7 +102,7 @@ function displayQuestion() {
  * Gets user input from onclick event and checks for correct answer
  */
 function checkAnswer(value) {
-
+  nextBtn.disabled = false;
   let inputAnswer = document.getElementById(value);
   inputAnswer.style.backgroundColor = "blue";
   if (inputAnswer.textContent === questionContent[currentQuestion].correct) {
@@ -138,6 +141,7 @@ function incrementWrong() {
 function showResult() {
   resultArea.removeAttribute("hidden");
   resultText.textContent = result;
+  resultText.style.visibility = "visible";
   correctNum.textContent = correctScore;
   wrongNum.textContent = wrongScore;
   btnA.disabled = true;
@@ -158,6 +162,8 @@ function nextQuestion() {
   btnB.style.backgroundColor = "green";
   btnC.style.backgroundColor = "green";
   btnD.style.backgroundColor = "green";
+  resultText.style.visibility = "hidden";
+  howToPlay.setAttribute("hidden", "hidden");
   runQuiz();
 }
 

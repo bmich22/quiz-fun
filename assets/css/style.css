@@ -3,7 +3,6 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
 .center {
     width: 80%;
     position: absolute;
@@ -12,6 +11,15 @@ body {
     transform: translate(-50%, -50%);
     padding: 5% 5%;
     text-align: center;
+}
+
+.green-bg {
+    color: green;
+    font-weight: 600;
+}
+
+.black-bg {
+    font-weight: 600;
 }
 
 button {
@@ -26,13 +34,23 @@ button {
     margin: 5px 2px;
 }
 
+#logo {
+    height: 100px;
+    width: 100px;
+}
+
 .choice-btn {
     width: 20%;
     margin-top: 1%;
 }
 
+#next-button {
+    background-color: rgb(55, 54, 54);
+}
+
 h1 {
     font-size: 3rem;
+    margin: .5em; 
 }
 
 h2 {
@@ -40,10 +58,17 @@ h2 {
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;  
 }
 
-p {}
+#quiz-page h3 {
+    font-size: 1.2rem;
+    padding-top: 3%;
+}
+
+p {
+    font-size:.8rem;
+}
 
 #score-area {
     padding-top: 0;
@@ -71,7 +96,6 @@ h4 {
 }
 
 #source-area {
-    padding: 2%;
     font-size: .7rem;
     font-style: italic;
 }

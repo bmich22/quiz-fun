@@ -1,4 +1,4 @@
-//Subject
+//Subject of the Quiz
 const subject = "The Pittsburgh Steelers";
 
 // Question Content
