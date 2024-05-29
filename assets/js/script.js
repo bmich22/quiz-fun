@@ -28,9 +28,9 @@ let total = questionContent.length;
 
 // Create arrays for random choosing of answer choices
 let activeChoices = [
-  questionContent[currentQuestion].choice1, 
-  questionContent[currentQuestion].choice2,  
-  questionContent[currentQuestion].choice3,  
+  questionContent[currentQuestion].choice1,
+  questionContent[currentQuestion].choice2,
+  questionContent[currentQuestion].choice3,
   questionContent[currentQuestion].choice4
 ];
 
@@ -62,28 +62,24 @@ function displayQuestion() {
   questionText.textContent = questionContent[currentQuestion].question;
 
   activeChoices = [
-    questionContent[currentQuestion].choice1, 
-    questionContent[currentQuestion].choice2,  
-    questionContent[currentQuestion].choice3,  
+    questionContent[currentQuestion].choice1,
+    questionContent[currentQuestion].choice2,
+    questionContent[currentQuestion].choice3,
     questionContent[currentQuestion].choice4,
   ];
   newChoices = [];
-  alert("activechoices before loop are " + activeChoices);
-  alert("newChoices before loop " + newChoices);
+
   //display choices randomly
   for (let i = 0; i < 4; i++) {
     let randomIndex = Math.floor(Math.random() * activeChoices.length);
-    alert("random index is  " +randomIndex)
     newChoices.push(activeChoices[randomIndex]);
     activeChoices.splice(randomIndex, 1);
-    alert("newChoices " + newChoices);
-    alert("activechoices " + activeChoices);
-  }  
-  btnA.textContent =newChoices[0];
-  btnB.textContent =newChoices[1]; 
+  }
+  btnA.textContent = newChoices[0];
+  btnB.textContent = newChoices[1];
   btnC.textContent = newChoices[2];
   btnD.textContent = newChoices[3];
-  
+
   //display current choices
   // btnA.textContent = questionContent[currentQuestion].choice1;
   // btnB.textContent = questionContent[currentQuestion].choice2;
@@ -145,7 +141,7 @@ function showFinalScore() {
   quizArea.setAttribute("hidden", "hidden");
   gameOver.removeAttribute("hidden");
   totalCorrect.textContent = correctScore;
-  totalQuestions.textContent= total;
+  totalQuestions.textContent = total;
 }
 
 function startAgain() {
