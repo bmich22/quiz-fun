@@ -16,6 +16,7 @@ const questionContent = [
     choice3: "Pirates",
     choice4: "Steagles",
     correct: "Pirates",
+    source: "Source: https://www.funtrivia.com/trivia-quiz/Sports/All-About-the-Steelers-1-291616.html"
   },
   {
     question: "What year did the Pittsburgh Steelers win their first Super Bowl?",
@@ -24,6 +25,7 @@ const questionContent = [
     choice3: "1978",
     choice4: "1972",
     correct: "1975",
+    source: "Source: https://www.funtrivia.com/trivia-quiz/Sports/A-Dynasty-To-Remember-279280.html"
   },
   {
     question: "After the 2006 season, which Steeler head coach stepped down after 15 seasons?",
@@ -32,6 +34,7 @@ const questionContent = [
     choice3: "Bill Austin",
     choice4: "Bill Cowher",
     correct: "Bill Cowher",
+    source: "Source:  https://www.funtrivia.com/trivia-quiz/Sports/Your-Pittsburgh-Steelers-271049.html"
   },
   {
     question: "In which year, did Art Rooney Sr. purchase the NFL franchise that would become the Pittsburgh Steelers?",
@@ -40,6 +43,7 @@ const questionContent = [
     choice3: "1933",
     choice4: "1942",
     correct: "1933",
+    source: "Source: https://www.funtrivia.com/trivia-quiz/Sports/Steelers-History-131736.html"
   },
   {
     question: "Who coached the Steelers to four Super Bowl wins in the 1970s seasons?",
@@ -48,6 +52,7 @@ const questionContent = [
     choice3: "Terry Bradshaw",
     choice4: "Joe Green",
     correct: "Chuck Noll",
+    source: "Source:  https://www.funtrivia.com/trivia-quiz/Sports/A-Dynasty-To-Remember-279280.html"
   },
   {
     question: "Who caught the ball during the play called the Immaculate Reception?",
@@ -64,6 +69,7 @@ const questionContent = [
     choice3: "Dallas Cowboys",
     choice4: "Denver Broncos",
     correct: "Dallas Cowboys",
+    source: "Source:  https://www.funtrivia.com/trivia-quiz/Sports/Your-Pittsburgh-Steelers-271049.html"
   },
   {
     question: "How many Super Bowl titles do the Pittsburgh Steelers have?",
@@ -72,6 +78,7 @@ const questionContent = [
     choice3: "6",
     choice4: "7",
     correct: "6",
+    source: "Source:  https://operations.nfl.com/learn-the-game/nfl-basics/team-histories/american-football-conference/north/pittsburgh-steelers/#:~:text=Team%20History,made%20the%20playoffs%20eight%20times."
   },
   {
     question: "Which Pittsburgh Steeler quarterback has the most yards passed in their careers?",
@@ -80,6 +87,7 @@ const questionContent = [
     choice3: "Bubby Brister",
     choice4: "Neil O'Donnell",
     correct: "Ben Roethlisberger",
+    source: "Source:  https://www.profootballhof.com/teams/pittsburgh-steelers/team-facts/"
   },
 ]
 

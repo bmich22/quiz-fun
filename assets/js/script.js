@@ -9,13 +9,12 @@ const resultArea = document.getElementById("result-area");
 const resultText = document.getElementById("result-text");
 const correctNum = document.getElementById("correctNum");
 const wrongNum = document.getElementById("wrongNum");
-const scoreArea = document.getElementById("score-area");
 const gameOver = document.getElementById("final-score");
 const quizArea = document.getElementById("quiz-area");
 const totalQuestions = document.getElementById("number-of-questions");
 const nextBtn = document.getElementById("next-button");
 const totalCorrect = document.getElementById("total-correct");
-const source = document.getElementById("source")
+const source = document.getElementById("source");
 
 
 // Set current question, correctScore and wrongScore variables to zero
@@ -27,16 +26,14 @@ let wrongScore = 0;
 let result = "";
 let total = questionContent.length;
 
-// Create arrays for random choosing of answer choices
+// Create arrays for randomly displaying answer choices
 let activeChoices = [
   questionContent[currentQuestion].choice1,
   questionContent[currentQuestion].choice2,
   questionContent[currentQuestion].choice3,
   questionContent[currentQuestion].choice4
 ];
-
 let newChoices = [];
-
 
 // Wait for the DOM to finish loading before beginning the quiz
 // Listen for click on start button
@@ -44,6 +41,10 @@ let newChoices = [];
 document.addEventListener("DOMContentLoaded", function () {
 });
 
+/**
+ * Entry to the quiz, called by user on click of the 'start quiz' button, 
+ * tests that the current question number is less than the length of the question array,
+ */
 function runQuiz() {
   if (currentQuestion < questionContent.length) {
     displayQuestion();
@@ -52,6 +53,9 @@ function runQuiz() {
   }
 }
 
+/**
+ * Hides the opening page content and displays the question and choices
+ */
 function displayQuestion() {
   startPage.setAttribute("hidden", "hidden");
   quizPage.removeAttribute("hidden");
@@ -63,38 +67,38 @@ function displayQuestion() {
   questionText.textContent = questionContent[currentQuestion].question;
   source.textContent = questionContent[currentQuestion].source;
 
+  // Assigns the activeChoices array with the answer choices for the current question
   activeChoices = [
     questionContent[currentQuestion].choice1,
     questionContent[currentQuestion].choice2,
     questionContent[currentQuestion].choice3,
     questionContent[currentQuestion].choice4,
   ];
+  // Sets newChoices array to empty
   newChoices = [];
 
-  //display choices randomly
+  //Fills newChoices array randomly and displays questions
   for (let i = 0; i < 4; i++) {
     let randomIndex = Math.floor(Math.random() * activeChoices.length);
     newChoices.push(activeChoices[randomIndex]);
     activeChoices.splice(randomIndex, 1);
   }
+  // Displays answer choices for current question randomly
   btnA.textContent = newChoices[0];
   btnB.textContent = newChoices[1];
   btnC.textContent = newChoices[2];
   btnD.textContent = newChoices[3];
-
-  //display current choices
-  // btnA.textContent = questionContent[currentQuestion].choice1;
-  // btnB.textContent = questionContent[currentQuestion].choice2;
-  // btnC.textContent = questionContent[currentQuestion].choice3;
-  // btnD.textContent = questionContent[currentQuestion].choice4;
 }
 
+/**
+ * Gets user input from onclick event and checks for correct answer
+ */
 function checkAnswer(value) {
-  // alert(value);
+ 
   let inputAnswer = document.getElementById(value);
   inputAnswer.style.backgroundColor = "blue";
   if (inputAnswer.textContent === questionContent[currentQuestion].correct) {
-    incrementCorrect()
+    incrementCorrect();
 
   } else {
     inputAnswer.style.backgroundColor = "red";
@@ -102,6 +106,30 @@ function checkAnswer(value) {
   }
 }
 
+/**
+ * Increments correct score and assigns "correct" value to result variable
+ */
+function incrementCorrect() {
+  correctScore += 1;
+  resultText.style.color = "blue";
+  result = "CORRECT!";
+  showResult();
+}
+
+/**
+ * Increment wrong score and assigns "incorrect" value to result variable
+ */
+function incrementWrong() {
+  wrongScore += 1;
+  resultText.style.color = "red";
+  result = "NOT CORRECT!";
+  showResult();
+}
+
+/**
+ * Unhides result area and displays either CORRECT! or INCORRECT! message, 
+ * disables choice buttons so user cannot choose again, displays update scores
+ */
 function showResult() {
   resultArea.removeAttribute("hidden");
   resultText.textContent = result;
@@ -114,20 +142,10 @@ function showResult() {
   nextBtn.disabled = false;
 }
 
-function incrementCorrect() {
-  correctScore += 1;
-  resultText.style.color = "blue";
-  result = "CORRECT!";
-  showResult();
-}
-
-function incrementWrong() {
-  wrongScore += 1;
-  resultText.style.color = "red";
-  result = "NOT CORRECT!";
-  showResult();
-}
-
+/**
+ * Increments currentQuestion variable, disables next button so user cannot click to advance scores, 
+ * sets buttons back to all green, calls runQuiz function to go to the next question in the array
+ */
 function nextQuestion() {
   currentQuestion += 1;
   nextBtn.disabled = true;
@@ -138,7 +156,7 @@ function nextQuestion() {
   runQuiz();
 }
 
-// show final score and start again button
+// Show final score and display start again button
 function showFinalScore() {
   quizArea.setAttribute("hidden", "hidden");
   gameOver.removeAttribute("hidden");
@@ -146,6 +164,9 @@ function showFinalScore() {
   totalQuestions.textContent = total;
 }
 
+/**
+ * Onclick of the "start again" button, the page refreshes and the opening page is displayed
+ */
 function startAgain() {
   location.reload();
 }
