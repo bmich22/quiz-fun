@@ -15,6 +15,7 @@ const quizArea = document.getElementById("quiz-area");
 const totalQuestions = document.getElementById("number-of-questions");
 const nextBtn = document.getElementById("next-button");
 const totalCorrect = document.getElementById("total-correct");
+const source = document.getElementById("source")
 
 
 // Set current question, correctScore and wrongScore variables to zero
@@ -60,6 +61,7 @@ function displayQuestion() {
   btnD.disabled = false;
   // display current question
   questionText.textContent = questionContent[currentQuestion].question;
+  source.textContent = questionContent[currentQuestion].source;
 
   activeChoices = [
     questionContent[currentQuestion].choice1,

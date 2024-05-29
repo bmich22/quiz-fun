@@ -7,6 +7,7 @@ const questionContent = [
     choice3: "St. Louis Cardinals",
     choice4: "Minnesota Vikings",
     correct: "Minnesota Vikings",
+    source: "Source: https://www.funtrivia.com/trivia-quiz/Sports/All-About-the-Steelers-2-292556.html"
   },
   {
     question: "In Pittsburgh's first year in the National Football League, what was their team name?",
