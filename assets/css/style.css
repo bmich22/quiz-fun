@@ -27,10 +27,10 @@ button {
 }
 
 .choice-btn {
-    width:15%;
+    width: 20%;
     margin-top: 1%;
 }
- 
+
 h1 {
     font-size: 3rem;
 }
@@ -66,3 +66,39 @@ h4 {
     color: red;
 }
 
+#final-score h4 {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .choice-btn {
+        width: 80%;
+        margin-top: 1%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    #final-score h4 {
+        font-size: 1.6rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .choice-btn {
+        width: 60%;
+        margin-top: 1%;
+    }
+
+}
