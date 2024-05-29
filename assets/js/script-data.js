@@ -18,18 +18,11 @@ const questionContent = [
   },
   {
     question: "This is question 3",
-    choice1: "3A",
-    choice2: "3B",
-    choice3: "3C",
-    choice4: "3D",
+    choice1: "three a",
+    choice2: "three b",
+    choice3: "three c",
+    choice4: "three d",
     correct: "3A",
-  },
-  {
-    question: "This is question 4",
-    choice1: "4A",
-    choice2: "4B",
-    choice3: "4C",
-    choice4: "4D",
-    correct: "4C",
   }
 ]
+

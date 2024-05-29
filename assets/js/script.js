@@ -1,10 +1,10 @@
-  const startPage = document.getElementById("start-page");
+const startPage = document.getElementById("start-page");
 const quizPage = document.getElementById("quiz-page");
 const questionText = document.getElementById("quizQuestion");
-const choiceA = document.getElementById("choiceA");
-const choiceB = document.getElementById("choiceB");
-const choiceC = document.getElementById("choiceC");
-const choiceD = document.getElementById("choiceD");
+const btnA = document.getElementById("choiceA");
+const btnB = document.getElementById("choiceB");
+const btnC = document.getElementById("choiceC");
+const btnD = document.getElementById("choiceD");
 const resultArea = document.getElementById("result-area");
 const resultText = document.getElementById("result-text");
 const correctNum = document.getElementById("correctNum");
@@ -21,21 +21,29 @@ const totalCorrect = document.getElementById("total-correct");
 let currentQuestion = 0;
 let correctScore = 0;
 let wrongScore = 0;
+
+//Set result string to an empty string, to be filled with either correct or incorrect
 let result = "";
 let total = questionContent.length;
+
+// Create arrays for random choosing of answer choices
+let activeChoices = [
+  questionContent[currentQuestion].choice1, 
+  questionContent[currentQuestion].choice2,  
+  questionContent[currentQuestion].choice3,  
+  questionContent[currentQuestion].choice4
+];
+
+let newChoices = [];
+
 
 // Wait for the DOM to finish loading before beginning the quiz
 // Listen for click on start button
 
 document.addEventListener("DOMContentLoaded", function () {
-  // document.getElementById("start").addEventListener("click", function () {
-  //   alert("You clicked the start button!");
-  //   runQuiz();
-  // })
-})
+});
 
 function runQuiz() {
-
   if (currentQuestion < questionContent.length) {
     displayQuestion();
   } else {
@@ -46,16 +54,41 @@ function runQuiz() {
 function displayQuestion() {
   startPage.setAttribute("hidden", "hidden");
   quizPage.removeAttribute("hidden");
-  choiceA.disabled = false;
-  choiceB.disabled = false;
-  choiceC.disabled = false;
-  choiceD.disabled = false;
-  // alert("array number is " + currentQuestion);
+  btnA.disabled = false;
+  btnB.disabled = false;
+  btnC.disabled = false;
+  btnD.disabled = false;
+  // display current question
   questionText.textContent = questionContent[currentQuestion].question;
-  choiceA.textContent = questionContent[currentQuestion].choice1;
-  choiceB.textContent = questionContent[currentQuestion].choice2;
-  choiceC.textContent = questionContent[currentQuestion].choice3;
-  choiceD.textContent = questionContent[currentQuestion].choice4;
+
+  activeChoices = [
+    questionContent[currentQuestion].choice1, 
+    questionContent[currentQuestion].choice2,  
+    questionContent[currentQuestion].choice3,  
+    questionContent[currentQuestion].choice4,
+  ];
+  newChoices = [];
+  alert("activechoices before loop are " + activeChoices);
+  alert("newChoices before loop " + newChoices);
+  //display choices randomly
+  for (let i = 0; i < 4; i++) {
+    let randomIndex = Math.floor(Math.random() * activeChoices.length);
+    alert("random index is  " +randomIndex)
+    newChoices.push(activeChoices[randomIndex]);
+    activeChoices.splice(randomIndex, 1);
+    alert("newChoices " + newChoices);
+    alert("activechoices " + activeChoices);
+  }  
+  btnA.textContent =newChoices[0];
+  btnB.textContent =newChoices[1]; 
+  btnC.textContent = newChoices[2];
+  btnD.textContent = newChoices[3];
+  
+  //display current choices
+  // btnA.textContent = questionContent[currentQuestion].choice1;
+  // btnB.textContent = questionContent[currentQuestion].choice2;
+  // btnC.textContent = questionContent[currentQuestion].choice3;
+  // btnD.textContent = questionContent[currentQuestion].choice4;
 }
 
 function checkAnswer(value) {
@@ -76,10 +109,10 @@ function showResult() {
   resultText.textContent = result;
   correctNum.textContent = correctScore;
   wrongNum.textContent = wrongScore;
-  choiceA.disabled = true;
-  choiceB.disabled = true;
-  choiceC.disabled = true;
-  choiceD.disabled = true;
+  btnA.disabled = true;
+  btnB.disabled = true;
+  btnC.disabled = true;
+  btnD.disabled = true;
   nextBtn.disabled = false;
 }
 
@@ -100,10 +133,10 @@ function incrementWrong() {
 function nextQuestion() {
   currentQuestion += 1;
   nextBtn.disabled = true;
-  choiceA.style.backgroundColor = "green";
-  choiceB.style.backgroundColor = "green";
-  choiceC.style.backgroundColor = "green";
-  choiceD.style.backgroundColor = "green";
+  btnA.style.backgroundColor = "green";
+  btnB.style.backgroundColor = "green";
+  btnC.style.backgroundColor = "green";
+  btnD.style.backgroundColor = "green";
   runQuiz();
 }
 
