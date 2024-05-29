@@ -18,13 +18,15 @@
     <div class="center">
         <section id="start-page">
             <h1 class="heading">Quiz Fun</h1>
-            <h2>Test your knowledge about the Pittsburgh Steelers</h2>
-            <button type="button" type="btn" id="start" onclick="runQuiz()">START QUIZ</button>
+            <h3>Test your knowledge about</h3>
+            <h3 id="subject">Subject</h3>
+            <button type="button" id="start" onclick="runQuiz()">START QUIZ</button>
         </section>
 
         <section id="quiz-area">
+            <h2 hidden="hidden">Trivia Game</h2>
             <section id="quiz-page" hidden="hidden">
-                <h3 id="quizQuestion"></h3>
+                <h3 id="quizQuestion">Question</h3>
                 <div id="choices-area">
                     <button type="button" class="choice-btn" id="choiceA" onclick="checkAnswer(this.value)"
                         value="choiceA">A. Choice</button><br>
@@ -36,7 +38,7 @@
                         value="choiceD">D. Choice</button><br>
                 </div>
                 <div id="result-area" hidden="hidden">
-                    <h4 id="result-text"></h4>
+                    <h4 id="result-text">Results</h4>
                     <button type="button" class="btn" id="next-button" onclick="nextQuestion()">NEXT</button>
                 </div>
             </section>
@@ -46,8 +48,8 @@
                 <!-- <p class="scores">Incorrect: <span id="wrongNum">0</span></p> -->
             </section>
             <section id="source-area">
-                <p class id="source">
-                    </pclass>
+                <p class id="source" hidden="hidden">
+                    Source
                 </p>
             </section>
         </section>

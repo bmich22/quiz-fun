@@ -1,3 +1,4 @@
+// Create variables for elements on index.html
 const startPage = document.getElementById("start-page");
 const quizPage = document.getElementById("quiz-page");
 const questionText = document.getElementById("quizQuestion");
@@ -15,7 +16,7 @@ const totalQuestions = document.getElementById("number-of-questions");
 const nextBtn = document.getElementById("next-button");
 const totalCorrect = document.getElementById("total-correct");
 const source = document.getElementById("source");
-
+const theme = document.getElementById("subject");
 
 // Set current question, correctScore and wrongScore variables to zero
 let currentQuestion = 0;
@@ -34,6 +35,9 @@ let activeChoices = [
   questionContent[currentQuestion].choice4
 ];
 let newChoices = [];
+
+// Display subject of quiz on opening page
+theme.textContent = subject;
 
 // Wait for the DOM to finish loading before beginning the quiz
 // Listen for click on start button
@@ -65,6 +69,7 @@ function displayQuestion() {
   btnD.disabled = false;
   // display current question
   questionText.textContent = questionContent[currentQuestion].question;
+  source.removeAttribute("hidden");
   source.textContent = questionContent[currentQuestion].source;
 
   // Assigns the activeChoices array with the answer choices for the current question
@@ -94,7 +99,7 @@ function displayQuestion() {
  * Gets user input from onclick event and checks for correct answer
  */
 function checkAnswer(value) {
- 
+
   let inputAnswer = document.getElementById(value);
   inputAnswer.style.backgroundColor = "blue";
   if (inputAnswer.textContent === questionContent[currentQuestion].correct) {
