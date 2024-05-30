@@ -112,6 +112,7 @@ h4 {
 }
 
 @media only screen and (max-width: 600px) {
+    
     .choice-btn {
         width: 80%;
         margin-top: 1%;
@@ -137,7 +138,6 @@ h4 {
     #final-score h4 {
         font-size: 1.6rem;
     }
-
 
 }
 
