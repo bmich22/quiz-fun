@@ -19,7 +19,8 @@
 
     <div class="center">
         <section id="start-page">
-            <img src="assets/images/logo quiz fun 150x150.png" alt="Logo for Quiz Fun website" id="logo"><h1 class="heading">Quiz Fun</h1>
+            <img src="assets/images/logo quiz fun 150x150.png" alt="Logo for Quiz Fun website" id="logo">
+            <h1 class="heading">Quiz Fun</h1>
             <h3>Test your knowledge about:</h3>
             <h3 id="subject">Subject</h3>
             <button type="button" id="start" onclick="runQuiz()">START QUIZ</button>
@@ -28,6 +29,7 @@
         <section id="quiz-area">
             <h2 hidden="hidden">Trivia Game</h2>
             <section id="quiz-page" hidden="hidden">
+                <img src="assets/images/logo quiz fun 150x150.png" alt="Logo for Quiz Fun website" id="logo-quiz-pg">
                 <h3 id="quizQuestion">Question</h3>
                 <div id="choices-area">
                     <button type="button" class="choice-btn" id="choiceA" onclick="checkAnswer(this.value)"
@@ -38,11 +40,11 @@
                         value="choiceC">C. Choice</button><br>
                     <button type="button" class="choice-btn" id="choiceD" onclick="checkAnswer(this.value)"
                         value="choiceD">D. Choice</button><br>
-                        <p id="instructions">Click on a <span class="green-bg">green button</span> to choose your answer then click the <span class="black-bg">next button</span> for the next question.</p>
+                    <p id="instructions">Click on a <span class="green-bg">green button</span> to choose your answer
+                        then click the <span class="black-bg">next button</span> for the next question.</p>
                 </div>
                 <div id="result-area">
                     <h4 id="result-text">Results</h4>
-                    
                     <button type="button" class="btn" id="next-button" onclick="nextQuestion()">NEXT</button>
                 </div>
             </section>

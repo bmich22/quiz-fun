@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(235, 233, 233);
     font-family: "Poppins", sans-serif;
 }
 
@@ -16,6 +16,7 @@ body {
 #subject {
     font-style: italic;
 }
+
 .green-bg {
     color: green;
     font-weight: 600;
@@ -40,6 +41,12 @@ button {
 #logo {
     height: 100px;
     width: 100px;
+}
+
+#logo-quiz-pg {
+    height: 50px;
+    width: 50px;
+    padding-top: 2%;
 }
 
 .choice-btn {
