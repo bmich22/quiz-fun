@@ -91,15 +91,11 @@ The following are sources of information used in building Jane Smith Fitness Coa
 ### Content, Code and Media
 | Source | Location | Notes |
 | ------ | -------- | ----- |
-| [Freepik.com](https://www.freepik.com/free-photo/fitness-woman-workout_7135725.htm#fromView=search&page=1&position=50&uuid=dc72e9bc-7936-40af-8fe1-e4e2d880d947) | Intro section | Image |
-| [Freepik.com](https://www.freepik.com/free-photo/women-working-out-with-trainer_6265274.htm#fromView=search&page=1&position=31&uuid=74944cf4-5462-46d6-a2be-f4b4b246a365) | About Jane section | Image |
-| [Webdev Simplified](https://youtu.be/fYq5PXgSsbE?si=T-L7xfA9toAmR3PZ) | Main section | Flexbox |
-| [CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background) | Main Section | Flexbox |
-| [Divya Thakur](https://www.youtube.com/watch?v=MCo1UtflJHM) | README | General how-to information |
-| [Github](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#links) | README | Basic Formatting Syntax |
-| [Github](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables) | README | Organized Data with Tables |
-| [Shay Howe](https://learn.shayhowe.com/html-css/writing-your-best-code/) | index.html and style.css | Coding Practices |
-| [Chris Quinn, Mentor](https://github.com/10xOXR) | HTML | Smooth Scrolling and "defer" when putting a script in the head |
+| [dofactory.com]https://www.dofactory.com/html/div/hidden#:~:text=You%20can%20specify%20either%20'hidden,redisplays%20the%20element | JavaScript | Hidden / Attribute -- how to hide and show elements from JS |
+| [altcademy.com]https://www.altcademy.com/blog/how-to-disable-a-button-in-javascript/#:~:text=getElementById(%22myButton%22)%3B%20%2F%2F,able%20to%20click%20on%20it. |Choice buttons and next button | How to disable and activate buttons in JS
+| [freecodecamp.org]https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/ | Play Again button | How to refresh and reload a page from JS |
+| [Hubspot.com]https://blog.hubspot.com/website/center-div-css | Main Section | code to center the entire div without using Flexbox |
+| [Chris Quinn, Mentor](https://github.com/10xOXR) | JavaScript | Using a second javascript file to hold the array content, information about using global variables, and using a basic loop that is not a for or while loop.
 
 ### Acknowledgements
 * Thank you to [Chris Quinn](https://github.com/10xOXR), my mentor at Code Institute.
