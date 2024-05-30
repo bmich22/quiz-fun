@@ -65,9 +65,11 @@ Quiz - Fun has room to grow
 
 | Page | Language | Validator | Outcome |
 | ---- | -------- | --------- | ------- |
-| index.html | HTML |[The W3 Markup Validation Service]() | No errors found. |
-| thank-you.html | HTML |[The W3 Markup Validation Service](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbmich22.github.io%2Ffitness-coach%2Fthank-you.html) | No errors found. |
-| style.css | CSS | [The W3 CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2F8000-bmich22-fitnesscoach-6om28dv68cc.ws-eu110.gitpod.io%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | No errors found. |
+| index.html | HTML |[The W3 Markup Validation Service]() | No errors found. |(https://validator.w3.org/nu/?doc=https%3A%2F%2Fbmich22.github.io%2Fquiz-fun%2F) |
+| style.css | CSS | [The W3 CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbmich22.github.io%2Fquiz-fun%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | No errors found. |
+| script.js | JavaScript |[JSHint.com](readme-images/quiz-fun-script-js-file-screencapture-jshint-2024-05-30-20-19-49.png) | Comment 1: 'two undefined variables - subject and questionContent'; the reason for this comment is that these variables were declared in a separate javaScript file, script-data.js, created for the array of questions and subject. Comment 2: 'Three unused variables, checkAnswer, nextQuestion, startAgain'; the reason for this comment is that these are functions that are called from the index.html file |
+| script-data.js | JavaScript |[JSHint.com](readme-images/quiz-fun-script-data-screencapture-jshint-2024-05-30-20_15_03.png) | Comment: 'two unused variables - subject and questionContent'; the reason this comment appeared is that this javaScript file exists only to hold the content for the question array and the quiz subject |
+
 
 
 ## Unfixed Bugs

@@ -92,5 +92,5 @@ const questionContent = [
     correct: "Ben Roethlisberger",
     source: "Source:  https://www.profootballhof.com/teams/pittsburgh-steelers/team-facts/"
   },
-]
+];
 
