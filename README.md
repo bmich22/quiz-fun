@@ -78,12 +78,12 @@ The site was deployed to GitHub Pages with the following steps:
 1. Under Branch, click on the drop-down menu and select Main
 1. Next to main, click on the drop-down menu and choose the folder root
 1. Under Branch, click Save
-1. Wait a few minutes and refresh the page. When the site is live, you will have a message at the top of the page, Your site is live with a link to the page.
+1. After a few minutes and a page refresh, once the site is live, a message appears at the top of the page, 'Your site is live', with a link to the page.
 
-The live link can be found here: https://bmich22.github.io/fitness-coach
+The live link can be found here: https://bmich22.github.io/quiz-fun/
 
 ## Credits
-The following are sources of information used in building Jane Smith Fitness Coach.
+The following are sources of information used in building Quiz - Fun
 
 ### Content, Code and Media
 | Source | Location | Notes |
