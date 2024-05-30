@@ -1,5 +1,5 @@
 # Quiz - Fun 
-Quiz - Fun is a website that utilizes JavaScript to host short quizzes on a variety of subjects. Currently it has one quiz about the American NFL football team, the Pittsburgh Steelers. The goal of Quiz - Fun is to provide users with fun, short quizzes on a variety of subjects. The look is simple, and it easy to navigate. Quiz - Fun has room to grow by adding more subjects.
+Quiz - Fun is a website that utilizes JavaScript to host short quizzes on a variety of subjects. Currently it has one quiz about the American NFL football team, the Pittsburgh Steelers. The goal of Quiz - Fun is to provide users with fun, short quizzes on a variety of subjects. The look is simple, it easy to navigate and fully responsive. Quiz - Fun has room to grow by adding more subjects, more difficulty and a timer.
 
 ## Mockups
 
@@ -7,13 +7,13 @@ Quiz - Fun is a website that utilizes JavaScript to host short quizzes on a vari
 
 ## Color Scheme
 The color scheme for Quiz - Fun is clean and simple, a light gray background on the opening page and buttons and messages are in primary colors.  The logo is a red question mark on a black background.
-* rgb(235, 233, 233) is the background color for the opening page
+* #ebe9e9 (light gray) is the background color for the opening page
 * #000000 (black) is used for the opening page and question text
-* #ffffff (white) is used for the navigation and links on the header and footer
+* #ffffff (white) is used for the text on the buttons
 * #008000 (green)is used for the background color of the start button, the answer choice buttons and the start-again buttons.
-* #373636 (dark gray) is used for the next button to differntiate it with green answer choice buttons
-* #ff0000 (red) is used to show the INCORRECT! message and the incorrect score number
-* #ffff00 (blue) is used to show the CORRECT! message and the correct score number
+* #373636 (dark gray) is used for the next button to differentiate it with the green answer choice buttons
+* #ff0000 (red) is used to show the INCORRECT! message, the incorrect score number, and to change the green button background to red when a wrong answer was chosen
+* #ffff00 (blue) is used to show the CORRECT! message, the correct score number, and to change the green button background to blue when a wrong answer was chosen
 
 ## Typography
 Quiz-Fun uses one font, Poppins, utilizing Poppins at a different weights for the title, button text, questions and scores. Poppins italic at a smaller size was used for the source text that displays at the bottom of the page for each question. 
@@ -21,27 +21,24 @@ Quiz-Fun uses one font, Poppins, utilizing Poppins at a different weights for th
 ## Wireframe
 | Description | Image       | 
 |------------ | ----------- |
-| The original design of Quiz - Fun was going to utilize an image to display the question next to the buttons for answer choices. The final design did not use images so that it would be easier to add more subjects.  Also the centered design makes the site easily responsive, with only a few size changes in media queries for smaller screens. | ![screenshot](readme-images/wirefram-quiz-fun.png) |
-
-
-
+| The original design of Quiz - Fun would use an image to display the question next to the buttons for answer choices. The final design did not use images so that it would be easier to add more subjects. Also the centered design makes the site easily responsive, with only a few size changes in media queries for smaller screens. | ![screenshot](readme-images/wirefram-quiz-fun.png) |
 
 ## Features
 ### Existing
 
 | Feature | Description | Screenshot  | Screenshot  |
 |-------- | ----------- | ---------- | ---------- |
-| Favicon | Quiz - Fun has a custom favicon that featuers of bold red question mark on a blackground. It displays next to the page title in the browser tab. | ![screenshot](assets/images/favicon-40x40.png) |
-|Landing Page | The landing page is very straightforward, it shows the subject of the quiz with a green start button to start. As quiz subjects are added, the landing page will display button choices of subjects first, that on click, will take the user to the landing page for that quiz.| ![screenshot](readme-images/landing-page-quiz-fun.png) | ![screenshot](readme-images/landing-page-mobile-quiz-Fun.png)
-|Quiz Subject | The subject of the quiz is displayed in italics and as quiz subjects are added, the subject will be displayed when the correcsponding button is clicked| ![screenshot](readme-images/subject-quiz-fun-img.png) | 
-| Start Button | On click of the this button starts the quiz | ![screenshot](readme-images/start-button-quiz-fun-img.png) |  
-| Quiz question | On click of the start button takes the user to the first question of the quiz.  The quiz question is black bold text at the top and the answer choices are in green stacked vertically. The answer choices are populated randomly so if you run the quiz again, the answers will be in different button positions. There is a sentence that instructs the user how to play, it displays on this page only. | ![screenshot](readme-images/quiz-page-quiz-fun.png) | ![screenshot](readme-images/quiz-page-mobile-quiz-fun.jpg) |
-| Choice Buttons | The user must click on one of the green answer choice buttons. On click of the button, a result will show either CORRECT! in red, or INCORRECT! in blue. The button that was chosen will change color to red or blue, whether it was the correct choice or not. Also, the coice button will be disabled after the choice is made so the user cannot keep clicking on them.| ![screenshot](readme-images/onclick-green-answer-button-quiz-fun-img.png) | ![screenshot](readme-images/onclick-green-answer-button-incorrect-mobile-Quiz-Fun-img.png.jpg) |
-| Next Button | The user clicks next to display the next question. The choice buttons all turn back to green and become active again.  The next button is disabled until an answer is clicked.| ![screenshot](readme-images/next-button-quiz-fun-img.png) 
-| Score area | The correct and incorrect scores are incremented with each question and are displayed underneath the next button. Correct scores are displayed in blue, incorrect scores are displayed in red. | ![screenshot](readme-images/score-area-quiz-fun-img.png) 
-| Source | The source for each question is displayed at the bottom of the page in italic, smaller size text. |![screenshot](readme-images/source-quiz-fun-img.png) |
-|Final Score | Once the array of questions is finished, the click on the next button will take the user to the Final Score page that displays the total correct answers out of the total number of questions.| ![screenshot](readme-images/final-score-quiz-fun-img.png) |
-|Play Again Button | On click of the play again button, the page will be refreshed and the user can start the quiz again.  | ![screenshot](readme-images/play-again-button-quiz-fun-img.png)
+| Favicon | Quiz - Fun has a custom favicon that features a bold red question mark on a black background. It displays next to the page title in the browser tab. | ![screenshot](assets/images/favicon-40x40.png) |
+|Landing Page | The landing page is very straightforward, it shows the subject of the quiz with a green start button. As quiz subjects are added, the landing page will display button choices of subjects first, that on click, will take the user to the landing page for that quiz.| ![screenshot](readme-images/landing-page-quiz-fun.png) | ![screenshot](readme-images/landing-page-mobile-quiz-Fun.png)
+|Quiz Subject | The subject of the quiz is displayed in italics. | ![screenshot](readme-images/subject-quiz-fun-img.png) | 
+| Start Button | The user clicks on the 'start quiz' button to begin. This was achieved utilizing the onclick method of JavaScript. | ![screenshot](readme-images/start-button-quiz-fun-img.png) |  
+| Quiz question | On click of the 'start button' takes the user to the first question of the quiz. The quiz question is displayed in black, bold text at the top of the screen and the answer choices are in green and stacked vertically. The answer choices are populated randomly by using JavaScript, so if you run the quiz again, the answers will be in different button positions. There is a sentence that instructs the user how to play, it displays on this page only. | ![screenshot](readme-images/quiz-page-quiz-fun.png) | ![screenshot](readme-images/quiz-page-mobile-quiz-fun.jpg) |
+| Choice Buttons | The user must click on one of the green answer 'choice buttons'. On click of the button, a result will show either CORRECT! in red, or INCORRECT! in blue. The button that was chosen will also change color to red or blue. Also, the 'choice buttons' will be disabled after the choice is made so the user cannot keep clicking on the buttons. This was achieved with JavaScript. | ![screenshot](readme-images/onclick-green-answer-button-quiz-fun-img.png) | ![screenshot](readme-images/onclick-green-answer-button-incorrect-mobile-Quiz-Fun-img.png.jpg) |
+| Next Button | The user clicks 'next button' to display the next question. All four of the choice buttons turn back to green and become active again. The CORRECT! or INCORRECT! message is removed. The 'next button' is disabled until an answer is clicked. This was achieved with JavaScript.| ![screenshot](readme-images/next-button-quiz-fun-img.png) |![screenshot](readme-images/after-next-button.png)
+| Score area | The correct and incorrect scores are incremented by utilizing an if-statement in JavaScript, and are displayed underneath the 'next button'. Correct scores are displayed in blue, incorrect scores are displayed in red. | ![screenshot](readme-images/score-area-quiz-fun-img.png) 
+| Source | The source for each question is displayed at the bottom of the page in italic, smaller size text. The source is stored in the questionContent array and is displayed using JavaScript. |![screenshot](readme-images/source-quiz-fun-img.png) |
+|Final Score | Once the array of questions is finished, the click on the 'next button' will take the user to the Final Score page that displays the total correct answers out of the total number of questions.| ![screenshot](readme-images/final-score-quiz-fun-img.png) |
+|Play Again Button | On click of the 'play again button', the page will be refreshed and the user can start the quiz again. Achieved with JavaScript. | ![screenshot](readme-images/play-again-button-quiz-fun-img.png)
 
 
 ### Future Features
@@ -67,10 +64,8 @@ Quiz - Fun has room to grow
 | ---- | -------- | --------- | ------- |
 | index.html | HTML |[The W3 Markup Validation Service]() | No errors found. |(https://validator.w3.org/nu/?doc=https%3A%2F%2Fbmich22.github.io%2Fquiz-fun%2F) |
 | style.css | CSS | [The W3 CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbmich22.github.io%2Fquiz-fun%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | No errors found. |
-| script.js | JavaScript |[JSHint.com](readme-images/quiz-fun-script-js-file-screencapture-jshint-2024-05-30-20-19-49.png) | Comment 1: 'two undefined variables - subject and questionContent'; the reason for this comment is that these variables were declared in a separate javaScript file, script-data.js, created for the array of questions and subject. Comment 2: 'Three unused variables, checkAnswer, nextQuestion, startAgain'; the reason for this comment is that these are functions that are called from the index.html file |
-| script-data.js | JavaScript |[JSHint.com](readme-images/quiz-fun-script-data-screencapture-jshint-2024-05-30-20_15_03.png) | Comment: 'two unused variables - subject and questionContent'; the reason this comment appeared is that this javaScript file exists only to hold the content for the question array and the quiz subject |
-
-
+| script.js | JavaScript |[JSHint.com](readme-images/quiz-fun-script-js-file-screencapture-jshint-2024-05-30-20-19-49.png) | Comment 1: 'two undefined variables - subject and questionContent'; the reason for this comment is that these variables were declared in a separate JavaScript file, script-data.js, created for the array of questions and subject. Comment 2: 'Three unused variables, checkAnswer, nextQuestion, startAgain'; the reason for this comment is that these are functions that are called from the index.html file |
+| script-data.js | JavaScript |[JSHint.com](readme-images/quiz-fun-script-data-screencapture-jshint-2024-05-30-20_15_03.png) | Comment: 'two unused variables - subject and questionContent'; the reason this comment appeared is that this JavaScript file exists only to hold the content for the question array and the quiz subject |
 
 ## Unfixed Bugs
 There are no unfixed bugs.
