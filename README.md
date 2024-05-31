@@ -16,12 +16,12 @@ The color scheme for Quiz - Fun is clean and simple, a light gray background on 
 * #ffff00 (blue) is used to show the CORRECT! message, the correct score number, and to change the green button background to blue when a wrong answer was chosen
 
 ## Typography
-Quiz-Fun uses one font, Poppins, utilizing Poppins at a different weights for the title, button text, questions and scores. Poppins italic at a smaller size was used for the source text that displays at the bottom of the page for each question. 
+Quiz-Fun uses one font, Poppins, utilizing Poppins at different weights for the title, button text, questions and scores. Poppins italic at a smaller size was used for the source text that displays at the bottom of the page for each question. 
 
 ## Wireframe
 | Description | Image       | 
 |------------ | ----------- |
-| The original design of Quiz - Fun would use an image to display the question next to the buttons for answer choices. The final design did not use images so that it would be easier to add more subjects. Also the centered design makes the site easily responsive, with only a few size changes in media queries for smaller screens. | ![screenshot](readme-images/wirefram-quiz-fun.png) |
+| The original design of Quiz - Fun would use an image to display the question next to the buttons for answer choices. The final design did not use images so that it would be easier to add more subjects. Also, the centered design makes the site easily responsive, with only a few size changes in media queries for smaller screens. | ![screenshot](readme-images/wirefram-quiz-fun.png) |
 
 ## Features
 ### Existing
@@ -29,13 +29,13 @@ Quiz-Fun uses one font, Poppins, utilizing Poppins at a different weights for th
 | Feature | Description | Screenshot  | Screenshot  |
 |-------- | ----------- | ---------- | ---------- |
 | Favicon | Quiz - Fun has a custom favicon that features a bold red question mark on a black background. It displays next to the page title in the browser tab. | ![screenshot](assets/images/favicon-40x40.png) |
-|Landing Page | The landing page is very straightforward, it shows the subject of the quiz with a green start button. As quiz subjects are added, the landing page will display button choices of subjects first, that on click, will take the user to the landing page for that quiz.| ![screenshot](readme-images/landing-page-quiz-fun.png) | ![screenshot](readme-images/landing-page-mobile-quiz-Fun.png)
+|Landing Page | The landing page is very straightforward; it shows the subject of the quiz with a green start button. As quiz subjects are added, the landing page will display button choices of subjects first, that on click, will take the user to the landing page for that quiz.| ![screenshot](readme-images/landing-page-quiz-fun.png) | ![screenshot](readme-images/landing-page-mobile-quiz-Fun.png)
 |Quiz Subject | The subject of the quiz is displayed in italics. | ![screenshot](readme-images/subject-quiz-fun-img.png) | 
 | Start Button | The user clicks on the 'start quiz' button to begin. This was achieved utilizing the onclick method of JavaScript. | ![screenshot](readme-images/start-button-quiz-fun-img.png) |  
 | Quiz question | On click of the 'start button' takes the user to the first question of the quiz. The quiz question is displayed in black, bold text at the top of the screen and the answer choices are in green and stacked vertically. The answer choices are populated randomly by using JavaScript, so if you run the quiz again, the answers will be in different button positions. There is a sentence that instructs the user how to play, it displays on this page only. | ![screenshot](readme-images/quiz-page-quiz-fun.png) | ![screenshot](readme-images/quiz-page-mobile-quiz-fun.jpg) |
 | Choice Buttons | The user must click on one of the green answer 'choice buttons'. On click of the button, a result will show either CORRECT! in red, or INCORRECT! in blue. The button that was chosen will also change color to red or blue. Also, the 'choice buttons' will be disabled after the choice is made so the user cannot keep clicking on the buttons. This was achieved with JavaScript. | ![screenshot](readme-images/onclick-green-answer-button-quiz-fun-img.png) | ![screenshot](readme-images/onclick-green-answer-button-incorrect-mobile-Quiz-Fun-img.png.jpg) |
 | Next Button | The user clicks 'next button' to display the next question. All four of the choice buttons turn back to green and become active again. The CORRECT! or INCORRECT! message is removed. The 'next button' is disabled until an answer is clicked. This was achieved with JavaScript.| ![screenshot](readme-images/next-button-quiz-fun-img.png) |![screenshot](readme-images/after-next-button.png)
-| Score area | The correct and incorrect scores are incremented by utilizing an if-statement in JavaScript, and are displayed underneath the 'next button'. Correct scores are displayed in blue, incorrect scores are displayed in red. | ![screenshot](readme-images/score-area-quiz-fun-img.png) 
+| Score area | The correct and incorrect scores are incremented by utilizing an if-statement in JavaScript and are displayed underneath the 'next button'. Correct scores are displayed in blue, incorrect scores are displayed in red. | ![screenshot](readme-images/score-area-quiz-fun-img.png) 
 | Source | The source for each question is displayed at the bottom of the page in italic, smaller size text. The source is stored in the questionContent array and is displayed using JavaScript. |![screenshot](readme-images/source-quiz-fun-img.png) |
 |Final Score | Once the array of questions is finished, the click on the 'next button' will take the user to the Final Score page that displays the total correct answers out of the total number of questions.| ![screenshot](readme-images/final-score-quiz-fun-img.png) |
 |Play Again Button | On click of the 'play again button', the page will be refreshed and the user can start the quiz again. Achieved with JavaScript. | ![screenshot](readme-images/play-again-button-quiz-fun-img.png)
@@ -44,7 +44,7 @@ Quiz-Fun uses one font, Poppins, utilizing Poppins at a different weights for th
 ### Future Features
 Quiz - Fun has room to grow
 * Add quiz subjects
-* Add more questions to the question array and have them display randomly so no quizzes on one subject will be exactly the same
+* Add more questions to the question array and have them display randomly so no quiz for one subject will be exactly the same
 * Add a timer to the quiz
 * Monetize by displaying ads
 
@@ -92,7 +92,7 @@ The following are sources of information used in building Quiz - Fun
 | [altcademy.com]https://www.altcademy.com/blog/how-to-disable-a-button-in-javascript/#:~:text=getElementById(%22myButton%22)%3B%20%2F%2F,able%20to%20click%20on%20it. |Choice buttons and next button | How to disable and activate buttons in JS
 | [freecodecamp.org]https://www.freecodecamp.org/news/javascript-refresh-page-how-to-reload-a-page-in-js/ | Play Again button | How to refresh and reload a page from JS |
 | [Hubspot.com]https://blog.hubspot.com/website/center-div-css | Main Section | code to center the entire div without using Flexbox |
-| [Chris Quinn, Mentor](https://github.com/10xOXR) | JavaScript | Using a second javascript file to hold the array content, information about using global variables, and using a basic loop that is not a for or while loop.
+| [Chris Quinn, Mentor](https://github.com/10xOXR) | JavaScript | Using a second JavaScript file to hold the array content, information about using global variables, and using a basic loop that is not a for or while loop.
 
 ### Acknowledgements
 * Thank you to [Chris Quinn](https://github.com/10xOXR), my mentor at Code Institute.
